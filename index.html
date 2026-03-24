@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product E-book Store | Modern eBooks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="container">
+            <a href="index.html" class="logo">E-book<span>Store</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="ebooks.html">eBooks</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="ebooks.html" class="btn btn-primary">Browse All</a>
+        </nav>
+    </header>
+
+    <main id="app-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge">New Release Available</span>
+                    <h1>Level Up Your Knowledge</h1>
+                    <p class="lead">Practical, easy-to-read eBooks designed to help you master new skills and accelerate
+                        your career. No fluff, just actionable insights.</p>
+                    <div class="hero-btns">
+                        <a href="ebooks.html" class="btn btn-primary">Browse All eBooks</a>
+                        <a href="#featured" class="btn btn-outline">Explore Featured</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Featured eBook Bundle">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured eBooks -->
+        <section id="featured" class="featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured eBooks</h2>
+                    <p>Our most popular guides, trusted by thousands of digital creators.</p>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="ebook-cover.png"
+                                alt="How beginners start making money online">
+                        </div>
+                        <div class="product-details">
+                            <h3>How beginners start making money online</h3>
+                            <p>Master the art of doing more with less in your digital journey.</p>
+                            <div class="product-footer">
+                                <span class="price">$70.00</span>
+                                <a href="product.html?id=1" class="btn-text">View Details &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=800&auto=format&fit=crop"
+                                alt="Scaling Your Brand">
+                        </div>
+                        <div class="product-details">
+                            <h3>Scaling Your Brand</h3>
+                            <p>A step-by-step guide to building a loyal audience and brand.</p>
+                            <div class="product-footer">
+                                <span class="price">$0.00</span>
+                                <span class="btn-text" style="cursor: default; opacity: 0.6;">View Details &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800&auto=format&fit=crop"
+                                alt="Mastering Focus">
+                        </div>
+                        <div class="product-details">
+                            <h3>Mastering Focus</h3>
+                            <p>Increase your productivity with these science-backed techniques.</p>
+                            <div class="product-footer">
+                                <span class="price">$0.00</span>
+                                <span class="btn-text" style="cursor: default; opacity: 0.6;">View Details &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="ebooks.html" class="btn btn-outline">View All eBooks</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optional Service -->
+        <section class="optional-service" style="background-color: var(--accent-soft); padding: 60px 0; text-align: center; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+            <div class="container">
+                <h2 style="margin-bottom: 16px;">Want a Head Start?</h2>
+                <p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto 30px;">For $25 I can make your first eBook for you. It's completely optional, but perfect if you want to skip the setup and get right to selling.</p>
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- About Author -->
+        <section id="about" class="about">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="author.jpg" style="max-width: 320px; max-height: 400px; object-fit: cover; border-radius: 1rem; margin-left: auto; display: block;"
+                        alt="Author">
+                </div>
+                <div class="about-content">
+                    <h2>About the Author</h2>
+                    <p>I'm Elizna Bouwer, a digital creator and strategist with over 8 months
+                        of experience in building online businesses. My mission is to simplify
+                        complex concepts into easy-to-follow guides that actually get results.
+                        I am helping people to get an extra income stream through building
+                        your own digital product, get it priced and sold.</p>
+                    <p>Each ebook in this store is the result of thousands of hours of
+                        experimentation, failure, and ultimate success. I don't just teach the
+                        theory, I share the practical workflows that changed my life.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span>10k+</span>
+                            <p>Happy Readers</p>
+                        </div>
+                        <div class="stat">
+                            <span>3</span>
+                            <p>Published eBooks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Readers Say</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"How beginners start making money online completely changed how I approach my work. Elizna has a way of making
+                            everything seem so achievable."</p>
+                        <div class="testimonial-user">
+                            <strong>Sarah Jenkins</strong>
+                            <span>Freelance Designer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Finally, eBooks that aren't 200 pages of filler. Straight to the point and highly
+                            actionable. Highly recommend Scaling Your Brand."</p>
+                        <div class="testimonial-user">
+                            <strong>Michael Chen</strong>
+                            <span>Startup Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-card">
+                    <h2 style="color: #ffffff;">Ready to start your journey?</h2>
+                    <p style="color: rgba(255,255,255,0.7);">Join over 10,000 creators who are leveling up their knowledge today.</p>
+                    <a href="ebooks.html" class="btn btn-primary">Browse the Shop</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="logo">E-book<span>Store</span></a>
+                    <p>Practical, easy-to-read eBooks for the modern digital landscape. Level up your skills with
+                        expertly crafted guides.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ebooks.html">eBooks</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:bouwerelizna@gmail.com">bouwerelizna@gmail.com</a></p>
+                    <p>Phone: <a href="tel:0791902645">0791902645</a></p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elizna.bouwer.2025" target="_blank">Facebook</a>
+                        <a href="https://www.tiktok.com/@elizna.ebooks" target="_blank">TikTok</a>
+                        <a href="https://www.instagram.com/b.elizna/" target="_blank">Instagram</a>
+                        <a href="https://www.youtube.com/@eliznaBouwer" target="_blank">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Product E-book Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All eBooks | Product E-book Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar scrolled">
+        <nav class="container">
+            <a href="index.html" class="logo">E-book<span>Store</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ebooks.html" class="active">eBooks</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="ebooks.html" class="btn btn-primary">Browse All</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="store-hero">
+            <div class="container text-center">
+                <h1>All eBooks</h1>
+                <p>Browse our complete library of digital guides and level up your knowledge.</p>
+            </div>
+        </section>
+
+        <section class="store-grid-section">
+            <div class="container">
+                <div class="product-grid" id="ebook-store-grid">
+                    <!-- Products will be rendered by JS -->
+                </div>
+                <div class="coming-soon" style="text-align:center; margin-top:3rem; padding:3rem 2rem; border:2px dashed rgba(255,255,255,0.15); border-radius:1rem;">
+                    <h2 style="font-family:'Playfair Display',serif; margin-bottom:0.5rem;">More Coming Soon</h2>
+                    <p style="color:#333;">We're working on new eBooks. Stay tuned for fresh releases!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="index.html" class="logo">E-book<span>Store</span></a>
+                    <p>Practical, easy-to-read eBooks for the modern digital landscape. Level up your skills with
+                        expertly crafted guides.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ebooks.html">eBooks</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:bouwerelizna@gmail.com">bouwerelizna@gmail.com</a></p>
+                    <p>Phone: <a href="tel:0791902645">0791902645</a></p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elizna.bouwer.2025" target="_blank">Facebook</a>
+                        <a href="https://www.tiktok.com/@elizna.ebooks" target="_blank">TikTok</a>
+                        <a href="https://www.instagram.com/b.elizna/" target="_blank">Instagram</a>
+                        <a href="https://www.youtube.com/@eliznaBouwer" target="_blank">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Product E-book Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('ebook-store-grid');
+            const products = [
+                { id: 1, title: 'How beginners start making money online', price: 70, img: 'ebook-cover.png', pdfCover: 'cover page.png', pdf: 'Brown and White Modern Content Ideas for Beginners Carousel Instagram Post.pdf', buyLink: 'https://bouwerelizna.gumroad.com/l/nqwlda' },
+                { id: 2, title: 'Scaling Your Brand', price: 0, img: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=800' },
+                { id: 3, title: 'Mastering Focus', price: 0, img: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800' }
+            ];
+
+            products.forEach(p => {
+                const link = `product.html?id=${p.id}`;
+                const isInteractive = p.id === 1;
+                
+                const imgWrap = isInteractive ? `<a href="${link}"><img src="${p.img}" alt="${p.title}"></a>` : `<img src="${p.img}" alt="${p.title}">`;
+                const titleWrap = isInteractive ? `<a href="${link}" style="text-decoration: none; color: inherit;">${p.title}</a>` : p.title;
+                const btnWrap = isInteractive ? `<a href="${link}" class="btn btn-primary">View Details</a>` : `<span class="btn btn-primary" style="cursor: default; opacity: 0.6; pointer-events: none;">View Details</span>`;
+
+                const card = `
+                    <div class="product-card">
+                        <div class="product-image">
+                            ${imgWrap}
+                        </div>
+                        <div class="product-details">
+                            <h3 style="color: inherit;">${titleWrap}</h3>
+                            <p>An essential guide to mastering ${p.title.split(' ').slice(-1)} in the modern era.</p>
+                            <div class="product-footer">
+                                <span class="price">$${p.price.toFixed(2)}</span>
+                                ${btnWrap}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        });
+    </script>
+</body>
+
+</html>
